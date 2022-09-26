@@ -39,6 +39,12 @@ public class CafeUtil {
         }
     }
     public boolean displayMenu(ArrayList<String> menuItems, ArrayList<Double> prices){
-        return false;
+        if(menuItems.size()!=prices.size()){
+            return false;
+        }
+        for(int i=0;i<menuItems.size();i++){
+            System.out.format(i+" "+menuItems.get(i)+" -- $%.2f%n",prices.get(i));
+        }
+        return true;
     }
 }

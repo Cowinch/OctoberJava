@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-import java.util.Arrays;
+// import java.util.Arrays;
 
 public class TestCafe {
     public static void main(String[] args) {
@@ -38,5 +38,17 @@ public class TestCafe {
         // }
 
         appTest.printPriceChart("Columbian Coffee Grounds", 15, 3);
+
+        ArrayList<String> menuList = new ArrayList<String>();
+        menuList.add("drip coffee");
+        menuList.add("cappuccino");
+        menuList.add("latte");
+        menuList.add("mocha");
+        ArrayList<Double> priceList=new ArrayList<Double>();
+        priceList.add(1.5);
+        priceList.add(3.5);
+        priceList.add(4.5);
+        priceList.add(3.5);
+        appTest.displayMenu(menuList,priceList);
     }
 }
