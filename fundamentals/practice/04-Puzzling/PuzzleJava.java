@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Random;
 public class PuzzleJava {
-    public ArrayList getTenRolls(){
+    public ArrayList<Integer> getTenRolls(){
         ArrayList<Integer> rand10=new ArrayList<Integer>();
         Random rand=new Random();
         for (int i=1;i<=10;i++){
@@ -50,7 +50,7 @@ public class PuzzleJava {
         return password;
     }
 
-    public ArrayList generatePasswordSet(int num){
+    public ArrayList<String> generatePasswordSet(int num){
         //buncha crap to declare
         ArrayList<String> passwordArray= new ArrayList<String>();
         String alphabetString = "abcdefghijklmnopqrstuvwxyz";
