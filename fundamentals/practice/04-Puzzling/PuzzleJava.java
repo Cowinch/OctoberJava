@@ -51,15 +51,18 @@ public class PuzzleJava {
     }
 
     public ArrayList generatePasswordSet(int num){
+        //buncha crap to declare
         ArrayList<String> passwordArray= new ArrayList<String>();
         String alphabetString = "abcdefghijklmnopqrstuvwxyz";
         Random randNum=new Random();
 
         for(int i = 0;i<num;i++){
+            //code from previous assignment, password declared IN loop so we get a new declaration each time.
             String password = new String();
             for(int x=0;x<8;x++){
                 password+=alphabetString.charAt(randNum.nextInt(26));
             }
+            //add our new password to the array list and redo the outer loop
             passwordArray.add(password);
         }
         return passwordArray;
