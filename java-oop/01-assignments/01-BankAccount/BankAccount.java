@@ -43,7 +43,7 @@ public class BankAccount {
     public void depositMoney(double money) {
         boolean ready = false;
         while (ready == false) {
-            System.out.println("\nPlease specify the account: ");
+            System.out.println("\nPlease specify the account, or enter 'q' to cancel: ");
             String account = System.console().readLine();
             switch (account) {
                 case "checking":
@@ -63,6 +63,11 @@ public class BankAccount {
                     ready = true;
                     break;
 
+                case "q":
+                    System.out.println("\nUnderstood. Cancelling transaction.");
+                    ready=true;
+                    break;
+
                 default:
                     System.out.println(
                             "\nPleasse specify the account you would like to submit to:\n1) savings\n2) checking");
@@ -74,7 +79,7 @@ public class BankAccount {
     public void withdrawMoney(double money) {
         boolean ready = false;
         while (ready == false) {
-            System.out.println("\nPlease specify the account: ");
+            System.out.println("\nPlease specify the account, or enter 'q' to cancel: ");
             String account = System.console().readLine();
             switch (account) {
                 case "checking":
@@ -90,6 +95,7 @@ public class BankAccount {
                         ready=true;
                     }
                     break;
+
                 case "savings":
                     if (this.savingsBalance > money) {
                         this.savingsBalance -= money;
@@ -103,6 +109,12 @@ public class BankAccount {
                         ready=true;
                     }
                     break;
+
+                case "q":
+                    System.out.println("\nUnderstood. Cancelling transaction.");
+                    ready=true;
+                    break;
+
                 default:
                     System.out.println(
                             "\nPleasse specify the account you would like to submit to:\n1) savings\n2) checking");
