@@ -49,9 +49,9 @@ public class Developer {
     public double getHoursOfSleep(){
         return this.hoursOfSleep;
     }
-    public Project getProjects(){
-        return this.projects;
-    }
+    // public Project getProjects(){
+    //     // return this.projects;
+    // }
     
 
     //setter
@@ -67,8 +67,8 @@ public class Developer {
         this.hoursOfSleep=hoursOfSleep;
         return this;
     }
-    public Project setProjects(){
-        this.projects=projects;
-        return this;
-    }
+    // public Project setProjects(){
+    //     this.projects=projects;
+    //     return this;
+    // }
 }
