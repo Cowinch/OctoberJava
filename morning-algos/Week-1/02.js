@@ -19,6 +19,30 @@ class SinglyLinkedList {
         }
     }
 
+    /**
+   * Removes the last node of this list.
+   * - Time: O(?).
+   * - Space: O(?).
+   * @returns {any} The data from the node that was removed.
+   */
+    removeBack() {
+        //conditionals
+        if (this.head == null) {
+            return null;
+        }
+        if (this.head.next == null) {
+            return null;
+        }
+
+        //logic
+        var newLast = this.head;
+        while (newLast.next.next != null) {
+            newLast=newLast.next;
+        }
+        newLast.next=null;
+        return this.head;
+    }
+
     insertAtBack(data) {
         if (this.isEmpty()) {
             this.head = new ListNode(data);
@@ -47,7 +71,16 @@ class SinglyLinkedList {
      * - Space: (?).
      * @returns {any} The data from the removed node.
      */
-    removeHead() { }
+    removeHead() {
+        if (this.isEmpty()) {
+            return false
+        }
+        else {
+            const newHead = this.head.next;
+            this.head.next = null;
+            this.head = newHead;
+        }
+    }
 
     // EXTRA
     /**
@@ -112,3 +145,10 @@ list2.insertAtBackMany([3, 8, 7, 9, 8, 9])
 
 const list3 = new SinglyLinkedList()
 list3.insertAtBackMany([100])
+
+list2.removeBack()
+list2.removeBack()
+list2.removeBack()
+list2.removeBack()
+list2.removeBack()
+console.log(list2);
